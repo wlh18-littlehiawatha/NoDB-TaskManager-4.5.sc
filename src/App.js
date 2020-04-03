@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header';
+import AddItem from './components/AddItem';
+import SubHeader from './components/SubHeader';
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      taskArray: []
+    };
+
+    // bind items here as needed
+  }
+
+
+render(){
+  return(
+   <div>
+      <h1>App.js</h1>
+
+      <Header />
+      <AddItem />
+      <SubHeader />
+   </div >
+  )};
+
 }
 
 export default App;
