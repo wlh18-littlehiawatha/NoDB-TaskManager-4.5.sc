@@ -1,6 +1,69 @@
 @import './reset.css';
 
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Header{
+  height: 10vh;
+  /* width: 100%; */
+  background-color: aquamarine;
+  color: coral;
+
+  
+  font-weight: 900;
+  font-size: xx-large;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  
+
+}
+
+
+.SubHeader{
+  height: 5vh;
+  /* width: 100%; */
+  background-color: rgb(151, 124, 124);
+  color: burlywood;
+
+  
+  font-weight: 900;
+  font-size: xx-large;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -37,4 +100,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

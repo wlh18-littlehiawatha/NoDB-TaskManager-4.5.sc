@@ -5,6 +5,8 @@ import Header from './components/Header';
 import AddItem from './components/AddItem';
 import SubHeader from './components/SubHeader';
 
+import axios from 'axios';
+
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +17,14 @@ class App extends Component {
     };
 
     // bind items here as needed
+  }
+
+  componentDidMount() {
+    axios.get('/api/taskmanager'). then(res => {
+      this.setState({
+        taskArray: res.data
+      })
+    })
   }
 
 
