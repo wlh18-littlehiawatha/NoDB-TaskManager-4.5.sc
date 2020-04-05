@@ -6,6 +6,7 @@ class DisplayCompletedItems extends Component {
     super(props);
 
     this.state = {
+       completedTasks: []
       
     };
 
@@ -14,9 +15,16 @@ class DisplayCompletedItems extends Component {
 
 
 render(){
+
+   // let completedList = this.props.displayCompletedSaved.map((element) => {
+   //    console.log(element)
+   //    return <p> {element.taskItem} </p>
+   // })
+
   return(
    <div>
       <h1>DisplayCompletedItems.js</h1>
+      {/* <strike>{completedList}</strike> */}
    </div >
   )};
 
