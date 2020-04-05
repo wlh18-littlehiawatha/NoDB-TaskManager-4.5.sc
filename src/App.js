@@ -19,13 +19,13 @@ class App extends Component {
     // bind items here as needed
   }
 
-  componentDidMount() {
-    axios.get('/api/taskmanager'). then(res => {
-      this.setState({
-        taskArray: res.data
-      })
-    })
-  }
+  // componentDidMount() {
+  //   axios.get('/api/taskmanager'). then(res => {
+  //     this.setState({
+  //       taskArray: res.data
+  //     })
+  //   }).catch(error => console.log(error))
+  // }
 
 
 render(){

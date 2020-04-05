@@ -1,20 +1,23 @@
-const express = require('express')
-//
+const express = require('express');
 
-const app = express()
+// IMPORT controllers file
+const taskManagerController = require('./controllers/taskManagerController')
+
+
+const app = express();
 
 const PORT = 5555;
 
-app.use(express.json())
+app.use(express.json());
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT} smash brother!`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT} smash brother!`));
 
 
 
 // endpoints
 
-app.get('/api/taskManager')
+app.get('/api/taskManager', taskManagerController.getTaskListArr)
 // if you have more controllers insert here
-app.post('/api/taskManager')
-app.put('/api/taskManager:id')
-app.delete('/api/taskManager:id')
+app.post('/api/taskManager', taskManagerController.addTaskListArr)
+app.put('/api/taskManager:id', taskManagerController.editTaskListArr)
+app.delete('/api/taskManager:id', taskManagerController.deleteTaskItem)
