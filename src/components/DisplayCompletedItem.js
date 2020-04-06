@@ -18,14 +18,14 @@ render(){
    console.log(this.props)
    let completedList = this.props.displayCompletedSaved.map((element) => {
       console.log(element)
-      return <p> {element.taskLineItem} </p>
+      return <p className = "taskLineItemsCompleted"> {element.taskLineItem} </p>
    })
 
   return(
-   <div>
-      <h1>DisplayCompletedItems.js</h1>
+   <section className="CompletedTasks">
+      
       <strike>{completedList}</strike>
-   </div >
+   </section >
   )};
 
 }

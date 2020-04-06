@@ -41,7 +41,7 @@ render(){
 
   return(
    <div>
-      <h1>AddItem.js</h1>
+      
       <button onClick = {() => this.handleButton()}>Add Task</button>
       <input onChange = {(whatsTyped) => this.handleInput(whatsTyped.target.value)} /> 
 

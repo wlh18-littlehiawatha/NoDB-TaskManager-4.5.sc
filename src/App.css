@@ -10,7 +10,7 @@
   height: 10vh;
   /* width: 100%; */
   background-color: aquamarine;
-  color: coral;
+  color: #ff006b;
 
   
   font-weight: 900;
@@ -52,8 +52,41 @@
 
 
 
+.CompletedTasks {
+  background-color: burlywood;
+  height: 150px;
+  opacity: 100%;
+}
+
+.taskLineItemsCompleted{
+  color:  rgb(151, 124, 124);
+  font: small-caps;  
+  font-size: xx-large;
+  font-weight: 600;
+  margin-right: 50px;
 
 
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.editAndDelete{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+
+button{
+  background-color: cornsilk;
+  margin: 0px 5px;
+}
 
 
 

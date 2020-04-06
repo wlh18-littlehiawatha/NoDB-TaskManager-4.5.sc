@@ -66,11 +66,9 @@ class App extends Component {
 
 render(){
   const {taskArray, displayCompletedSaved} = this.state;
-  console.log(displayCompletedSaved)
+  // console.log(displayCompletedSaved)
   return(
-   <div>
-      <h1>App.js</h1>
-
+   <div className="App">
       <Header />
       <AddItem 
         taskArray = {taskArray}      

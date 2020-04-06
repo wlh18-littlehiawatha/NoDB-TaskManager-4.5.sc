@@ -4,22 +4,22 @@ import React from 'react';
 
 function SubHeader(props) {
 console.log(props)
-   let mapList = props.taskArray.map((e, i) => {
+   let mapList = props.taskArray.map((task, i) => {
       return (
-         <section key={i} >
-            <button onClick={() => props.deleteTaskItem(e.id)}>Task Completed</button>
+         <section className="editAndDelete" key={i} >
+            <button onClick={() => props.deleteTaskItem(task.id)}>Task Completed</button>
             {
                props.toggleEdit === true ?
                   <div>
-                     <button onClick={() => props.handleEditUpdateTask(e.id)} >Save Task Update</button>
+                     <button onClick={() => props.handleEditUpdateTask(task.id)} >Save Task Update</button>
                      {/* lineItem */}
-                     <input placeholder={e.lineItem} onChange={(e) => props.handleEdit(e.target.value)} />
+                     <input placeholder={task.lineItem} onChange={(task) => props.handleEdit(task.target.value)} />
                   </div>
                   :
-                  <div>
+                  <div className="editAndDelete">
                      <button onClick={() => props.handleEditToggle()} >Edit</button>
                      {/* lineItem */}
-                     <h2> {e.taskLineItem} </h2>
+                     <h2> {task.taskLineItem} </h2>
                   </div>
             }
          </section>
