@@ -3,7 +3,9 @@ import './App.css';
 
 import Header from './components/Header';
 import AddItem from './components/AddItem';
-import SubHeader from './components/SubHeader';
+// import SubHeader from './components/SubHeader';
+import DisplayCompletedItems from './components/DisplayCompletedItem';
+
 
 import axios from 'axios';
 
@@ -47,7 +49,7 @@ class App extends Component {
     }).catch(error =>console.log(error))
   }
 
-
+// =================================================================   ======================================
   deleteTaskItem = (id) => {
     axios.delete(`/api/taskManager/${id}`)
     .then(res => {
@@ -64,7 +66,7 @@ class App extends Component {
 
 render(){
   const {taskArray, displayCompletedSaved} = this.state;
-
+  console.log(displayCompletedSaved)
   return(
    <div>
       <h1>App.js</h1>
@@ -72,12 +74,13 @@ render(){
       <Header />
       <AddItem 
         taskArray = {taskArray}      
+
         addTaskItem = {this.addTaskItem}
-        deleteTaskItem = {this.deleteTaskItem}
         editTaskItem = {this.editTaskItem}
+        deleteTaskItem = {this.deleteTaskItem}
       />
-      <SubHeader
-       displayCompletedSaved = {displayCompletedSaved} 
+      <DisplayCompletedItems
+       displayCompletedSaved={this.state.displayCompletedSaved} 
        />
    </div >
   )};
